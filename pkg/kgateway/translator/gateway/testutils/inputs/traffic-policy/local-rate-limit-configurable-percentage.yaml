@@ -42,8 +42,8 @@ spec:
       tokenBucket:
         maxTokens: 10
         fillInterval: 60s
-      filterEnabled: 50
-      filterEnforced: 50
+      percentEnabled: 50
+      percentEnforced: 50
 ---
 apiVersion: v1
 kind: Service

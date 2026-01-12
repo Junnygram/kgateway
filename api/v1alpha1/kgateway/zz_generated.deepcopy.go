@@ -3202,13 +3202,13 @@ func (in *LocalRateLimitPolicy) DeepCopyInto(out *LocalRateLimitPolicy) {
 		*out = new(TokenBucket)
 		(*in).DeepCopyInto(*out)
 	}
-	if in.FilterEnabled != nil {
-		in, out := &in.FilterEnabled, &out.FilterEnabled
+	if in.PercentEnabled != nil {
+		in, out := &in.PercentEnabled, &out.PercentEnabled
 		*out = new(int32)
 		**out = **in
 	}
-	if in.FilterEnforced != nil {
-		in, out := &in.FilterEnforced, &out.FilterEnforced
+	if in.PercentEnforced != nil {
+		in, out := &in.PercentEnforced, &out.PercentEnforced
 		*out = new(int32)
 		**out = **in
 	}

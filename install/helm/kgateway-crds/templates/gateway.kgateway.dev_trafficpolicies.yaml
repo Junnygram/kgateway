@@ -1323,19 +1323,19 @@ spec:
                   local:
                     description: Local defines a local rate limiting policy.
                     properties:
-                      filterEnabled:
+                      percentEnabled:
                         default: 100
                         description: |-
-                          FilterEnabled specifies the percentage of requests for which the rate limit filter is enabled.
+                          PercentEnabled specifies the percentage of requests for which the rate limit filter is enabled.
                           If not specified, defaults to 100.
                         format: int32
                         maximum: 100
                         minimum: 0
                         type: integer
-                      filterEnforced:
+                      percentEnforced:
                         default: 100
                         description: |-
-                          FilterEnforced specifies the percentage of requests for which the rate limit filter is enforced.
+                          PercentEnforced specifies the percentage of requests for which the rate limit filter is enforced.
                           If not specified, defaults to 100.
                         format: int32
                         maximum: 100

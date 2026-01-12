@@ -77,13 +77,13 @@ func toLocalRateLimitFilterConfig(t *kgateway.LocalRateLimitPolicy) *localrateli
 	}
 
 	filterEnabled := uint32(100)
-	if t.FilterEnabled != nil {
-		filterEnabled = uint32(*t.FilterEnabled) // nolint:gosec // G115: kubebuilder validation ensures safe for uint32
+	if t.PercentEnabled != nil {
+		filterEnabled = uint32(*t.PercentEnabled) // nolint:gosec // G115: kubebuilder validation ensures safe for uint32
 	}
 
 	filterEnforced := uint32(100)
-	if t.FilterEnforced != nil {
-		filterEnforced = uint32(*t.FilterEnforced) // nolint:gosec // G115: kubebuilder validation ensures safe for uint32
+	if t.PercentEnforced != nil {
+		filterEnforced = uint32(*t.PercentEnforced) // nolint:gosec // G115: kubebuilder validation ensures safe for uint32
 	}
 
 	var lrl *localratelimitv3.LocalRateLimit = &localratelimitv3.LocalRateLimit{
