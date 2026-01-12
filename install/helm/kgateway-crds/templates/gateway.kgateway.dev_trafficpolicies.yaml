@@ -1324,22 +1324,14 @@ spec:
                     description: Local defines a local rate limiting policy.
                     properties:
                       percentEnabled:
-                        default: 100
-                        description: |-
-                          PercentEnabled specifies the percentage of requests for which the rate limit filter is enabled.
-                          If not specified, defaults to 100.
+                        description: PercentEnabled specifies the percentage of requests
+                          for which the rate limiter is enabled.
                         format: int32
-                        maximum: 100
-                        minimum: 0
                         type: integer
                       percentEnforced:
-                        default: 100
-                        description: |-
-                          PercentEnforced specifies the percentage of requests for which the rate limit filter is enforced.
-                          If not specified, defaults to 100.
+                        description: PercentEnforced specifies the percentage of requests
+                          for which the rate limiter is enforced.
                         format: int32
-                        maximum: 100
-                        minimum: 0
                         type: integer
                       tokenBucket:
                         description: |-
