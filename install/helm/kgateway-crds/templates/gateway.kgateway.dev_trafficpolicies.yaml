@@ -1327,11 +1327,15 @@ spec:
                         description: PercentEnabled specifies the percentage of requests
                           for which the rate limiter is enabled.
                         format: int32
+                        maximum: 100
+                        minimum: 0
                         type: integer
                       percentEnforced:
                         description: PercentEnforced specifies the percentage of requests
                           for which the rate limiter is enforced.
                         format: int32
+                        maximum: 100
+                        minimum: 0
                         type: integer
                       tokenBucket:
                         description: |-
