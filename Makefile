@@ -143,9 +143,16 @@ $(CUSTOM_GOLANGCI_LINT_BIN): go.mod go.sum .custom-gcl.yml
 	GOTOOLCHAIN=$(GOTOOLCHAIN) $(GOLANGCI_LINT) custom
 
 ACTION_LINT ?= go tool github.com/rhysd/actionlint/cmd/actionlint
-.PHONY: lint-actions
 lint-actions: ## Lint the GitHub Actions workflows
 	$(ACTION_LINT)
+
+.PHONY: check-eof-newline
+check-eof-newline: ## Check that all files end with a newline
+	./hack/check-eof-newline.sh
+
+.PHONY: fix-eof-newline
+fix-eof-newline: ## Fix files that do not end with a newline
+	FIX=true ./hack/check-eof-newline.sh
 
 #----------------------------------------------------------------------------------
 # Ginkgo Tests
